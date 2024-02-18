@@ -1,0 +1,7 @@
+{
+    "query": "query questionEditorData($titleSlug: String!) {question(titleSlug: $titleSlug) {questionId questionFrontendId codeSnippets {lang langSlug code}}}",
+    "variables": {
+        "titleSlug": ""
+    },
+    "operationName": "questionEditorData"
+}
