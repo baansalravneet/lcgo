@@ -12,6 +12,7 @@ import (
 )
 
 var URL string = "https://leetcode.com/graphql"
+
 //go:embed embed/*.json
 var content embed.FS
 
@@ -94,9 +95,10 @@ func getQuestionId(responseBody []byte) (string, string) {
 	}
 	var questionId string
 	var questionTitle string
+	fmt.Println(outputData)
 	if jsonData, ok := outputData["data"].(map[string]interface{}); ok {
 		if jsonQuestion, ok := jsonData["question"].(map[string]interface{}); ok {
-			if qId, ok := jsonQuestion["questionId"].(string); ok {
+			if qId, ok := jsonQuestion["questionFrontendId"].(string); ok {
 				questionId = qId
 			}
 			if title, ok := jsonQuestion["title"].(string); ok {

@@ -1,5 +1,5 @@
 {
-    "query": "query questionTitle($titleSlug: String!) {question(titleSlug: $titleSlug) {questionId title}}",
+    "query": "query questionTitle($titleSlug: String!) {question(titleSlug: $titleSlug) {questionFrontendId title}}",
     "variables": {
         "titleSlug": ""
     },
