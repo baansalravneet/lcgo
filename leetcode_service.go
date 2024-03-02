@@ -95,7 +95,6 @@ func getQuestionId(responseBody []byte) (string, string) {
 	}
 	var questionId string
 	var questionTitle string
-	fmt.Println(outputData)
 	if jsonData, ok := outputData["data"].(map[string]interface{}); ok {
 		if jsonQuestion, ok := jsonData["question"].(map[string]interface{}); ok {
 			if qId, ok := jsonQuestion["questionFrontendId"].(string); ok {
